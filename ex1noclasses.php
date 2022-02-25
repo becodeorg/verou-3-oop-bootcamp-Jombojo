@@ -21,6 +21,4 @@ if(!empty($basketAmount))
     echo nl2br("\n");
     echo "The tamount of tax you pay for this is €" . $totalTax . ".";
 }
-
-
 ?>
