@@ -11,9 +11,12 @@ require './alcohol2_class.php';
 
 $basketAmount = $_GET["basketamount"];
 
+if (!empty($basketAmount))
+{
 
 
-echo "Total cost is €" . $basketAmount*($bananas->getPrice()+$apples->getPrice()+$wine->getPrice()) . "<br>";
-echo "Total tax is €" . $basketAmount*($bananas->getTax()+$apples->getTax()+$wine->getTax()) . "<br>";
-echo "Total cost of fruit is " . ($apples->getPrice() + $bananas->getPrice()) . "<br>";
-echo "Total cost of wine is " . $wine->getPrice() . "<br>";
+    echo "Total cost is €" . $basketAmount*($bananas->getPrice()+$apples->getPrice()+$wine->getPrice()) . "<br>";
+    echo "Total tax is €" . $basketAmount*($bananas->getTax()+$apples->getTax()+$wine->getTax()) . "<br>";
+    echo "Total cost of fruit is " . ($apples->getPrice() + $bananas->getPrice()) . "<br>";
+    echo "Total cost of wine is " . $wine->getPrice() . "<br>";
+}
